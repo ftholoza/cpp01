@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: francesco <francesco@student.42.fr>        +#+  +:+       +#+         #
+#    By: ftholoza <ftholoza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/25 20:31:13 by francesco         #+#    #+#              #
-#    Updated: 2024/02/25 21:37:23 by francesco        ###   ########.fr        #
+#    Updated: 2024/05/29 20:11:27 by ftholoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
-FLAGS = -std=c++98 -Wall -Wextra -Werror
+CXX = c++
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 INCLUDES = Harl.hpp
@@ -22,7 +22,7 @@ all : $(NAME)
 re :fclean $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 clean :
 	rm -f $(OBJ) $(INCLUDES).gch
 fclean: clean

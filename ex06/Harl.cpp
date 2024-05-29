@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francesco <francesco@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ftholoza <ftholoza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 20:31:01 by francesco         #+#    #+#             */
-/*   Updated: 2024/02/25 22:27:18 by francesco        ###   ########.fr       */
+/*   Updated: 2024/05/29 20:13:17 by ftholoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void    Harl::error(void)
 
 void Harl::complain(std::string level, int filter)
 {
-    int     i = 0;
     void    (Harl::*complain[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     
     switch(filter)
